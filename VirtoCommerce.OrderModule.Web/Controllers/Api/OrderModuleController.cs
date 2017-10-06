@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.IO;
 using System.Linq;
@@ -380,6 +381,7 @@ namespace VirtoCommerce.OrderModule.Web.Controllers.Api
         /// Payment callback operation used by external payment services to inform post process payment in our system
         /// </summary>
         /// <param name="callback">payment callback parameters</param>
+        [AllowAnonymous]
         [HttpPost]
         [Route("~/api/paymentcallback")]
         [ResponseType(typeof(PostProcessPaymentResult))]
