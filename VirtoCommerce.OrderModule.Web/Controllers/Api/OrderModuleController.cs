@@ -440,6 +440,7 @@ namespace VirtoCommerce.OrderModule.Web.Controllers.Api
             return Ok(new PostProcessPaymentResult { ErrorMessage = "cancel payment" });
         }
 
+        [AllowAnonymous]
         [HttpGet]
         [Route("invoice/{orderNumber}")]
         [SwaggerFileResponse]

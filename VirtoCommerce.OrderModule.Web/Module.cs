@@ -92,7 +92,7 @@ namespace VirtoCommerce.OrderModule.Web
                 {
                     Body = OrderNotificationResource.CreateOrderNotificationBody,
                     Subject = OrderNotificationResource.CreateOrderNotificationSubject,
-                    Language = "en-US"
+                    Language = "sv-SE"
                 }
             });
 
@@ -104,7 +104,7 @@ namespace VirtoCommerce.OrderModule.Web
                 {
                     Body = OrderNotificationResource.OrderPaidNotificationBody,
                     Subject = OrderNotificationResource.OrderPaidNotificationSubject,
-                    Language = "en-US"
+                    Language = "sv-SE"
                 }
             });
 
@@ -116,7 +116,7 @@ namespace VirtoCommerce.OrderModule.Web
                 {
                     Body = OrderNotificationResource.OrderSentNotificationBody,
                     Subject = OrderNotificationResource.OrderSentNotificationSubject,
-                    Language = "en-US"
+                    Language = "sv-SE"
                 }
             });
 
@@ -128,7 +128,7 @@ namespace VirtoCommerce.OrderModule.Web
                 {
                     Body = OrderNotificationResource.NewOrderStatusNotificationBody,
                     Subject = OrderNotificationResource.NewOrderStatusNotificatonSubject,
-                    Language = "en-US"
+                    Language = "sv-SE"
                 }
             });
 
@@ -140,7 +140,7 @@ namespace VirtoCommerce.OrderModule.Web
                 {
                     Body = OrderNotificationResource.CancelOrderNotificationBody,
                     Subject = OrderNotificationResource.CancelOrderNotificationSubject,
-                    Language = "en-US"
+                    Language = "sv-SE"
                 }
             });
 
@@ -152,7 +152,7 @@ namespace VirtoCommerce.OrderModule.Web
                 {
                     Body = InvoiceResource.Body,
                     Subject = InvoiceResource.Subject,
-                    Language = "en-US"
+                    Language = "sv-SE"
                 }
             });
 

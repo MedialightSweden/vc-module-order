@@ -52,6 +52,7 @@ namespace VirtoCommerce.OrderModule.Data.Services
             retVal.TaxPercentRate = cart.TaxPercentRate;
             retVal.TaxType = cart.TaxType;
             retVal.LanguageCode = cart.LanguageCode;
+            retVal.CreatedDate = cart.CreatedDate;
 
             retVal.Status = "New";
 
