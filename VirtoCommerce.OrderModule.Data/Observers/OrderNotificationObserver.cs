@@ -68,7 +68,7 @@ namespace VirtoCommerce.OrderModule.Data.Observers
                     notifications.Add(notification);
                 }*/
 
-                if (IsOrderPaid(changeEvent))
+                if (IsOrderPaid(changeEvent) || (changeEvent.OrigOrder.Status == "Pending" && (changeEvent.ModifiedOrder.Status == "Paid" || changeEvent.ModifiedOrder.Status == "Authorized")))
                 {
                     var notification = _notificationManager.GetNewNotification<OrderPaidEmailNotification>(changeEvent.ModifiedOrder.StoreId, "Store", changeEvent.ModifiedOrder.LanguageCode);
                     notifications.Add(notification);
