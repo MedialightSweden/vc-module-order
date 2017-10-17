@@ -58,15 +58,15 @@ namespace VirtoCommerce.OrderModule.Data.Observers
                     notifications.Add(notification);
                 }
 
-                if (IsNewStatus(changeEvent))
+                /*if (IsNewStatus(changeEvent))
                 {
                     var notification = _notificationManager.GetNewNotification<NewOrderStatusEmailNotification>(changeEvent.ModifiedOrder.StoreId, "Store", changeEvent.ModifiedOrder.LanguageCode);
 
                     notification.NewStatus = changeEvent.ModifiedOrder.Status;
                     notification.OldStatus = changeEvent.OrigOrder.Status;
 
-                    //notifications.Add(notification);
-                }
+                    notifications.Add(notification);
+                }*/
 
                 if (IsOrderPaid(changeEvent))
                 {
