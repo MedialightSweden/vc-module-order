@@ -65,7 +65,7 @@ namespace VirtoCommerce.OrderModule.Data.Observers
                     notification.NewStatus = changeEvent.ModifiedOrder.Status;
                     notification.OldStatus = changeEvent.OrigOrder.Status;
 
-                    //notifications.Add(notification);
+                    notifications.Add(notification);
                 }
 
                 if (IsOrderPaid(changeEvent))
