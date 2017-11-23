@@ -41,7 +41,7 @@ namespace VirtoCommerce.OrderModule.Data.Observers
 
         public void OnNext(OrderChangedEvent changeEvent)
         {
-            if (_settingsManager.GetValue("Order.SendOrderNotifications", true))
+            if (_settingsManager.GetValue("Order.SendOrderNotifications", true) && changeEvent.OrigOrder.Status != changeEvent.ModifiedOrder.Status)
             {
                 //Collection of order notifications
                 var notifications = new List<OrderEmailNotificationBase>();
@@ -74,7 +74,7 @@ namespace VirtoCommerce.OrderModule.Data.Observers
                     notifications.Add(notification);
                 }
 
-                if (IsOrderSent(changeEvent) || changeEvent.ModifiedOrder.Status == "Sent")
+                if (IsOrderSent(changeEvent) || (changeEvent.OrigOrder.Status != "Sent" && changeEvent.ModifiedOrder.Status == "Sent"))
                 {
                     var notification = _notificationManager.GetNewNotification<OrderSentEmailNotification>(changeEvent.ModifiedOrder.StoreId, "Store", changeEvent.ModifiedOrder.LanguageCode);
                     notifications.Add(notification);
