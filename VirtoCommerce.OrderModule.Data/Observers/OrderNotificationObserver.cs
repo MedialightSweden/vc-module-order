@@ -74,7 +74,7 @@ namespace VirtoCommerce.OrderModule.Data.Observers
                     notifications.Add(notification);
                 }
 
-                if (IsOrderSent(changeEvent))
+                if (IsOrderSent(changeEvent) || changeEvent.ModifiedOrder.Status == "Sent")
                 {
                     var notification = _notificationManager.GetNewNotification<OrderSentEmailNotification>(changeEvent.ModifiedOrder.StoreId, "Store", changeEvent.ModifiedOrder.LanguageCode);
                     notifications.Add(notification);
